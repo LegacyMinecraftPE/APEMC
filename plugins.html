@@ -111,9 +111,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 const pluginDetails = document.createElement("div");
                 pluginDetails.classList.add("plugin-details");
 
-                const pluginName = document.createElement("h3");
-                pluginName.classList.add("plugin-name");
-                pluginName.textContent = plugin.name;
+                const pluginNameLink = document.createElement("a");
+                pluginNameLink.classList.add("plugin-name");
+                pluginNameLink.textContent = plugin.name;
+                pluginNameLink.href = `pages/plugins/${encodeURIComponent(plugin.name)}.html`;
+
+                pluginItem.addEventListener("click", () => {
+                    window.location.href = pluginNameLink.href;
+                });
+
+                pluginDetails.appendChild(pluginNameLink);
 
                 const version = document.createElement("mark");
                 version.classList.add("version");
@@ -123,8 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 pluginDescription.classList.add("plugin-description");
                 pluginDescription.textContent = plugin.description;
 
-                pluginDetails.appendChild(pluginName);
-                pluginName.appendChild(version);
+                pluginDetails.appendChild(version);
                 pluginDetails.appendChild(pluginDescription);
 
                 const downloadLink = document.createElement("a");
