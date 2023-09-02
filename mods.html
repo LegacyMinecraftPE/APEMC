@@ -114,6 +114,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 const modName = document.createElement("h3");
                 modName.classList.add("mod-name");
                 modName.textContent = mod.name;
+		modNameLink.textContent = entry.modName;
+                modNameLink.href = `pages/mods/${encodeURIComponent(entry.modName)}.html`;
+                modNameCell.appendChild(modNameLink);
 
                 const version = document.createElement("mark");
                 version.classList.add("version");
