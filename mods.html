@@ -111,12 +111,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 const modDetails = document.createElement("div");
                 modDetails.classList.add("mod-details");
 
-                const modName = document.createElement("h3");
-                modName.classList.add("mod-name");
-                modName.textContent = mod.name;
-		modNameLink.textContent = entry.modName;
-                modNameLink.href = `pages/mods/${encodeURIComponent(entry.modName)}.html`;
-                modNameCell.appendChild(modNameLink);
+                // Create a link with the name of the mod that leads to the appropriate page
+                const modNameLink = document.createElement("a");
+                modNameLink.classList.add("mod-name");
+                modNameLink.textContent = mod.name;
+                modNameLink.href = `pages/mods/${encodeURIComponent(mod.name)}.html`;
+                modDetails.appendChild(modNameLink);
 
                 const version = document.createElement("mark");
                 version.classList.add("version");
@@ -126,8 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 modDescription.classList.add("mod-description");
                 modDescription.textContent = mod.description;
 
-                modDetails.appendChild(modName);
-                modName.appendChild(version);
+                modDetails.appendChild(version);
                 modDetails.appendChild(modDescription);
 
                 const downloadLink = document.createElement("a");
