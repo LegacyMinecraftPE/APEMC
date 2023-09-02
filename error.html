@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #292929;
+            color: #ccc;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        nav ul li.active a {
+            color: #f39c12;
+        }
+
+        /* Медиа-запрос для мобильных устройств */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .logo {
+                order: 1;
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            nav ul {
+                order: 1;
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin-right: 8;
+                margin-bottom: 10px;
+            }
+        }
+
+        .content {
+            padding: 50px 20px;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #f39c12;
+        }
+
+        .error-message {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #f39c12;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #ffad5a;
+        }
+    </style>
+    <title>Error</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Alpha PE Modifications Center</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mods.html">Mods</a></li>
+                <li><a href="plugins.html">Plugins</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>Error</h2>
+        <p class="error-message">Oops! Something went wrong.</p>
+        <a href="index.html" class="btn">Go to Home</a>
+    </section>
+</body>
+</html>
