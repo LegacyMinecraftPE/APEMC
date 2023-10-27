@@ -59,6 +59,18 @@
             color: #f39c12;
         }
 
+        .logo-text {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .logo-text:hover {
+            color: #f39c12;
+        }
+
         /* Медиа-запрос для мобильных устройств */
         @media (max-width: 768px) {
             nav {
